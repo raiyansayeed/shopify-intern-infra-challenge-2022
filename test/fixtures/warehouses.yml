@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  location: Hamilton
+  capacity: 10
+
+two:
+  id: 2
+  location: Toronto
+  capacity: 15

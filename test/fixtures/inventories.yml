@@ -1,0 +1,26 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  product_name: Couch 
+  amount: 10
+  price: 9.99
+  width: 2
+  height: 1
+  length: 1
+
+two:
+  product_name: Wardrobe
+  amount: 1
+  price: 9.99
+  width: 1.5
+  height: 2
+  length: 1
+
+bad_product:
+  product_name: A very big box
+  amount: 3
+  price: 10
+  width: 4
+  height: 4
+  length: 4
+  warehouse_id: 1 # should be over capacity of Hamilton location
