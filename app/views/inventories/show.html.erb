@@ -12,22 +12,22 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @inventory.price %>
+  <%= number_to_currency(@inventory.price) %>
 </p>
 
 <p>
   <strong>Width:</strong>
-  <%= @inventory.width %>
+  <%= @inventory.width %> m
 </p>
 
 <p>
   <strong>Length:</strong>
-  <%= @inventory.length %>
+  <%= @inventory.length %> m
 </p>
 
 <p>
   <strong>Height:</strong>
-  <%= @inventory.height %>
+  <%= @inventory.height %> m
 </p>
 
 <%= link_to 'Edit', edit_inventory_path(@inventory) %> |

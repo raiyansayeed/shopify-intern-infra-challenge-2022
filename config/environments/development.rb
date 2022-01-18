@@ -1,5 +1,11 @@
 require "active_support/core_ext/integer/time"
 
+class MyLoggerFormatter
+  def call(severity, time, progname, msg)
+    "#{Time.now.strftime("%F %T").to_s} #{severity} #{msg}\n"
+  end
+end
+
 Rails.application.configure do
   config.after_initialize do
     Bullet.enable        = true
@@ -10,6 +16,10 @@ Rails.application.configure do
     Bullet.rails_logger  = true
     Bullet.add_footer    = true
   end
+
+  logger           = ActiveSupport::Logger.new(STDOUT)
+  logger.formatter = MyLoggerFormatter.new
+  config.logger = ActiveSupport::TaggedLogging.new(logger)
 
   # Settings specified here will take precedence over those in config/application.rb.
 

@@ -9,3 +9,10 @@ two:
   id: 2
   location: Toronto
   capacity: 15
+
+neg_capacity_warehouse:
+  location: Windsor
+  capacity: -1
+
+no_location_warehouse:
+  capacity: 10

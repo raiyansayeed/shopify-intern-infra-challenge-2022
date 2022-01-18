@@ -19,21 +19,21 @@
   </div>
   <div class="field">
     <%= form.label :price %>
-    <%= form.text_field :price %>
+    $<%= form.text_field :price %>
   </div>
 
-  <h4><em>Note that the following measurements should be in metres</em></h4>
+  <%# <h4><em>Note that the following measurements should be in metres</em></h4> %>
   <div class="field">
     <%= form.label :width %>
-    <%= form.text_field :width %>
+    <%= form.text_field :width %> m
   </div>
   <div class="field">
     <%= form.label :length %>
-    <%= form.text_field :length %>
+    <%= form.text_field :length %> m
   </div>
   <div class="field">
     <%= form.label :height %>
-    <%= form.text_field :height %>
+    <%= form.text_field :height %> m
   </div>
   <div class="field">
     <%= form.label :warehouse_id %>

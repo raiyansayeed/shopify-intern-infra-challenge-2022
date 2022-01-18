@@ -2,6 +2,8 @@
 
 <h1>Inventories</h1>
 
+<%= link_to 'New Inventory', new_inventory_path %>
+
 <table>
   <thead>
     <tr>
@@ -20,10 +22,10 @@
       <tr>
         <td><%= inventory.product_name %></td>
         <td><%= inventory.amount %></td>
-        <td><%= inventory.price %></td>
-        <td><%= inventory.width %></td>
-        <td><%= inventory.length %></td>
-        <td><%= inventory.height %></td>
+        <td><%= number_to_currency(inventory.price) %></td>
+        <td><%= inventory.width %> m</td>
+        <td><%= inventory.length %> m</td>
+        <td><%= inventory.height %> m</td>
         <td><%= link_to 'Show', inventory %></td>
         <td><%= link_to 'Edit', edit_inventory_path(inventory) %></td>
         <td><%= link_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -31,7 +33,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Inventory', new_inventory_path %>

@@ -12,6 +12,8 @@ module InvTrack
     config.load_defaults 6.1
 
     # Configuration for the application, engines, and railties goes here.
+
+    config.middleware.use Rack::Attack
     #
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.

@@ -4,6 +4,7 @@ class Warehouse < ApplicationRecord
     has_many :inventory, dependent: :nullify
 
     # in metres^3
+    validates :location, presence: true
     validates :capacity, presence: true, numericality: { only_integer: true, greater_than_or_equal_to: 0 } 
 
     def current_capacity

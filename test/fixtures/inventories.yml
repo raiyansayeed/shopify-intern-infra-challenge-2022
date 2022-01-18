@@ -16,7 +16,7 @@ two:
   height: 2
   length: 1
 
-bad_product:
+over_capacity_product:
   product_name: A very big box
   amount: 3
   price: 10
@@ -24,3 +24,38 @@ bad_product:
   height: 4
   length: 4
   warehouse_id: 1 # should be over capacity of Hamilton location
+
+neg_dimensions_product:
+  product_name: A very big box
+  amount: 3
+  price: 10
+  width: -4
+  height: 1
+  length: 1
+  warehouse_id: 1
+
+no_name_product:
+  amount: 3
+  price: 10
+  width: -4
+  height: 1
+  length: 1
+  warehouse_id: 1
+  
+neg_amount_product:
+  product_name: A very big box
+  amount: -3
+  price: 10
+  width: 4
+  height: 1
+  length: 1
+  warehouse_id: 1
+
+neg_price_product:
+  product_name: A very big box
+  amount: 3
+  price: -10
+  width: 4
+  height: 1
+  length: 1
+  warehouse_id: 1
