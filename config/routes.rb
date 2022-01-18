@@ -3,5 +3,5 @@ Rails.application.routes.draw do
   resources :inventories
   resources :warehouses
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  root "home#index"
+  root "warehouses#index"
 end
